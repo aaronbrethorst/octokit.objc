@@ -76,7 +76,7 @@
 		9CF7FBBC179581EC00CA34FF /* user_starred.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF7FBBB179581EC00CA34FF /* user_starred.json */; };
 		9CF7FBBD179581EC00CA34FF /* user_starred.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CF7FBBB179581EC00CA34FF /* user_starred.json */; };
 		B1F240231863929F005F2414 /* OCTClient+Issues.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F240211863929F005F2414 /* OCTClient+Issues.h */; };
-		B1F240241863929F005F2414 /* OCTClient+Issues.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F240211863929F005F2414 /* OCTClient+Issues.h */; };
+		B1F240241863929F005F2414 /* OCTClient+Issues.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F240211863929F005F2414 /* OCTClient+Issues.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1F240251863929F005F2414 /* OCTClient+Issues.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F240221863929F005F2414 /* OCTClient+Issues.m */; };
 		B1F240261863929F005F2414 /* OCTClient+Issues.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F240221863929F005F2414 /* OCTClient+Issues.m */; };
 		D000EC7D18564B6B00468E84 /* commit.json in Resources */ = {isa = PBXBuildFile; fileRef = D000EC7C18564B6B00468E84 /* commit.json */; };
@@ -1536,6 +1536,7 @@
 				D0BC04B818403A3200EDD926 /* OCTClient+Keys.h in Headers */,
 				D087215E169E395F00016ACA /* OCTCommitComment.h in Headers */,
 				D0BC04BE18403A8800EDD926 /* OCTClient+Events.h in Headers */,
+				B1F240241863929F005F2414 /* OCTClient+Issues.h in Headers */,
 				D0872162169E395F00016ACA /* OCTCommitCommentEvent.h in Headers */,
 				D0872166169E395F00016ACA /* OCTEntity.h in Headers */,
 				D087216A169E395F00016ACA /* OCTEvent.h in Headers */,
@@ -1583,7 +1584,6 @@
 				9CB0587E17933F26002CF498 /* OCTDirectoryContent.h in Headers */,
 				D0BC051F184041F800EDD926 /* OCTCommit.h in Headers */,
 				D0E3E8B318359BD000EF530F /* OCTServerMetadata.h in Headers */,
-				B1F240241863929F005F2414 /* OCTClient+Issues.h in Headers */,
 				F6CF78D516E993A500A75F63 /* RACSignal+OCTClientAdditions.h in Headers */,
 				D0BC05321840420200EDD926 /* OCTRef.h in Headers */,
 				D0BC049F1840391600EDD926 /* OCTClient+User.h in Headers */,

@@ -14,6 +14,7 @@
 #import <OctoKit/OCTClient+Events.h>
 #import <OctoKit/OCTClient+Gists.h>
 #import <OctoKit/OCTClient+Git.h>
+#import <OctoKit/OCTClient+Issues.h>
 #import <OctoKit/OCTClient+Keys.h>
 #import <OctoKit/OCTClient+Notifications.h>
 #import <OctoKit/OCTClient+Organizations.h>
