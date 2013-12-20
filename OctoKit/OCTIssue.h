@@ -13,6 +13,9 @@
 // An issue on a repository.
 @interface OCTIssue : OCTObject
 
+// The body of this issue.
+@property (nonatomic, copy, readonly) NSString *body;
+
 // The webpage URL for this issue.
 @property (nonatomic, copy, readonly) NSURL *HTMLURL;
 
