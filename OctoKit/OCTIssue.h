@@ -9,6 +9,7 @@
 #import "OCTObject.h"
 
 @class OCTPullRequest;
+@class OCTUser;
 
 // An issue on a repository.
 @interface OCTIssue : OCTObject
@@ -21,6 +22,10 @@
 
 // The title of this issue.
 @property (nonatomic, copy, readonly) NSString *title;
+
+// The user to whom this issue is currently assigned,
+// or nil if this issue is unassigned.
+@property (nonatomic, copy, readonly) OCTUser *assignee;
 
 // The pull request that is attached to (i.e., the same as) this issue, or nil
 // if this issue does not have code attached.

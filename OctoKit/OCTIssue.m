@@ -8,6 +8,7 @@
 
 #import "OCTIssue.h"
 #import "OCTPullRequest.h"
+#import "OCTUser.h"
 #import <ReactiveCocoa/EXTKeyPathCoding.h>
 
 @interface OCTIssue ()
@@ -42,6 +43,10 @@
 		@"objectID": @"number",
 		@"pullRequestHTMLURL": @"pull_request.html_url",
 	}];
+}
+
++ (NSValueTransformer *)assigneeJSONTransformer {
+	return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:OCTUser.class];
 }
 
 + (NSValueTransformer *)HTMLURLJSONTransformer {
