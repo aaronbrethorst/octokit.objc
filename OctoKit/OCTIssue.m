@@ -42,6 +42,7 @@
 	    @"HTMLURL": @"html_url",
 		@"objectID": @"number",
 		@"pullRequestHTMLURL": @"pull_request.html_url",
+		@"URL": @"url"
 	}];
 }
 
@@ -54,6 +55,10 @@
 }
 
 + (NSValueTransformer *)pullRequestHTMLURLJSONTransformer {
+	return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)URLJSONTransformer {
 	return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 

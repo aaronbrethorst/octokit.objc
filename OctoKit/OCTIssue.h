@@ -17,6 +17,9 @@
 // The body of this issue.
 @property (nonatomic, copy, readonly) NSString *body;
 
+// The API URL for this issue.
+@property (nonatomic, copy, readonly) NSURL *URL;
+
 // The webpage URL for this issue.
 @property (nonatomic, copy, readonly) NSURL *HTMLURL;
 

@@ -9,6 +9,7 @@
 #import "OCTClient+Issues.h"
 #import "OCTRepository.h"
 #import "OCTIssue.h"
+#import "OCTIssueComment.h"
 #import "RACSignal+OCTClientAdditions.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
@@ -20,6 +21,13 @@
 										 parameters:nil
 									notMatchingEtag:nil];
 	return [[self enqueueRequest:request resultClass:OCTIssue.class] oct_parsedResults];
+}
+
+- (RACSignal*)fetchCommentsForIssue:(OCTIssue*)issue {
+	NSString *issuePath = issue.URL.path;
+	NSURLRequest* request = [self requestWithMethod:@"GET" path:[NSString stringWithFormat:@"%@/comments", issuePath]
+										 parameters:nil];
+	return [[self enqueueRequest:request resultClass:OCTIssueComment.class] oct_parsedResults];
 }
 
 @end

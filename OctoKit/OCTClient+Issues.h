@@ -8,6 +8,7 @@
 
 #import "OCTClient.h"
 
+@class OCTIssue;
 @class OCTRepository;
 
 @interface OCTClient (Issues)
@@ -19,4 +20,10 @@
 // `authenticated` and the `user` has permission to see them.
 - (RACSignal *)fetchIssuesForRepository:(OCTRepository *)repository;
 
+// Fetches the specified issue's comments.
+//
+// Returns a signal which sends zero or more OCTIssueComment objects. Private
+// repositories' `issue` comments will only be returned included if the client is
+// `authenticated` and the `user` has permission to see them.
+- (RACSignal*)fetchCommentsForIssue:(OCTIssue*)issue;
 @end
