@@ -10,6 +10,7 @@
 #import "OCTPullRequest.h"
 #import "OCTUser.h"
 #import <ReactiveCocoa/EXTKeyPathCoding.h>
+#import "NSValueTransformer+OCTPredefinedTransformerAdditions.h"
 
 @interface OCTIssue ()
 
@@ -39,10 +40,12 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
 	return [super.JSONKeyPathsByPropertyKey mtl_dictionaryByAddingEntriesFromDictionary:@{
 	    @"body": @"body",
+		@"createdAt": @"created_at",
 		@"comments": @"comments",
 	    @"HTMLURL": @"html_url",
 		@"objectID": @"number",
 		@"pullRequestHTMLURL": @"pull_request.html_url",
+		@"updatedAt": @"updated_at",
 		@"URL": @"url"
 	}];
 }
@@ -51,12 +54,20 @@
 	return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:OCTUser.class];
 }
 
++ (NSValueTransformer *)createdAtJSONTransformer {
+	return [NSValueTransformer valueTransformerForName:OCTDateValueTransformerName];
+}
+
 + (NSValueTransformer *)HTMLURLJSONTransformer {
 	return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
 + (NSValueTransformer *)pullRequestHTMLURLJSONTransformer {
 	return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)updatedAtJSONTransformer {
+	return [NSValueTransformer valueTransformerForName:OCTDateValueTransformerName];
 }
 
 + (NSValueTransformer *)URLJSONTransformer {

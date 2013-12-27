@@ -24,6 +24,9 @@
 // The number of comments on this issue.
 @property (nonatomic, readonly) NSUInteger comments;
 
+// The date this issue was created at.
+@property (nonatomic, copy, readonly) NSDate *createdAt;
+
 // The webpage URL for this issue.
 @property (nonatomic, copy, readonly) NSURL *HTMLURL;
 
@@ -33,6 +36,9 @@
 
 // The title of this issue.
 @property (nonatomic, copy, readonly) NSString *title;
+
+// The date this issue was last updated at.
+@property (nonatomic, copy, readonly) NSDate *updatedAt;
 
 // The API URL for this issue.
 @property (nonatomic, copy, readonly) NSURL *URL;
