@@ -30,4 +30,12 @@
 	return [[self enqueueRequest:request resultClass:OCTIssueComment.class] oct_parsedResults];
 }
 
+- (RACSignal*)fetchIssue:(NSURL*)url
+{
+	NSString *path = [@"/repos" stringByAppendingPathComponent:[url.path stringByReplacingOccurrencesOfString:@"pull" withString:@"issues"]];
+	NSURLRequest* request = [self requestWithMethod:@"GET" path:path
+										 parameters:nil];
+	return [[self enqueueRequest:request resultClass:OCTIssue.class] oct_parsedResults];
+}
+
 @end

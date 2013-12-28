@@ -26,4 +26,12 @@
 // repositories' `issue` comments will only be returned included if the client is
 // `authenticated` and the `user` has permission to see them.
 - (RACSignal*)fetchCommentsForIssue:(OCTIssue*)issue;
+
+
+// Fetches the issue specified by `url`.
+//
+// Returns a signal which sends zero or one OCTIssue objects. A private
+// repository's `issue` will only be returned included if the client is
+// `authenticated` and the `user` has permission to see them.
+- (RACSignal*)fetchIssue:(NSURL*)url;
 @end
