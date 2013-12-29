@@ -34,6 +34,7 @@
 #import <OctoKit/OCTIssueComment.h>
 #import <OctoKit/OCTIssueCommentEvent.h>
 #import <OctoKit/OCTIssueEvent.h>
+#import <OctoKit/OCTMilestone.h>
 #import <OctoKit/OCTNotification.h>
 #import <OctoKit/OCTObject.h>
 #import <OctoKit/OCTOrganization.h>

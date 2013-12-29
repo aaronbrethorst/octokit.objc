@@ -7,6 +7,7 @@
 //
 
 #import "OCTIssue.h"
+#import "OCTMilestone.h"
 #import "OCTPullRequest.h"
 #import "OCTUser.h"
 #import <ReactiveCocoa/EXTKeyPathCoding.h>
@@ -43,6 +44,7 @@
 		@"createdAt": @"created_at",
 		@"comments": @"comments",
 	    @"HTMLURL": @"html_url",
+		@"milestone": @"milestone",
 		@"objectID": @"number",
 		@"pullRequestHTMLURL": @"pull_request.html_url",
 		@"updatedAt": @"updated_at",
@@ -60,6 +62,10 @@
 
 + (NSValueTransformer *)HTMLURLJSONTransformer {
 	return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
++ (NSValueTransformer *)milestoneJSONTransformer {
+	return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:OCTMilestone.class];
 }
 
 + (NSValueTransformer *)pullRequestHTMLURLJSONTransformer {

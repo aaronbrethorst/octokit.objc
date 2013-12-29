@@ -8,6 +8,7 @@
 
 #import "OCTObject.h"
 
+@class OCTMilestone;
 @class OCTPullRequest;
 @class OCTUser;
 
@@ -29,6 +30,9 @@
 
 // The webpage URL for this issue.
 @property (nonatomic, copy, readonly) NSURL *HTMLURL;
+
+// The milestone to which this issue is assigned, if any.
+@property (nonatomic, copy, readonly) OCTMilestone *milestone;
 
 // The pull request that is attached to (i.e., the same as) this issue, or nil
 // if this issue does not have code attached.
